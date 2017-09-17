@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :comments
   devise_for :users
-  resources :music_titles
+  resources :music_titles do
+          resources :comments
+        end
   resources :albumnames
   resources :users 
   get 'title/:id' => 'overallconfigs#show'

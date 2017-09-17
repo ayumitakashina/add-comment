@@ -1,2 +1,15 @@
 <h1><%= @musictitle.title %>
-<p></p>
+
+<p>コメント</p>
+<ul>
+	<% if @musictitle.comments.any? %>
+	<% @musictitle.comments.each do |comment| %>
+	<li><%= comment.comment %> (by <%= comment.point %></li>
+	<% end %>
+	<% else %>
+	<li>no comment yet.</li>
+	<% end %>
+
+</ul>
+<%= render 'form' %>
+
