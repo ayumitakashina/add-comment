@@ -1,0 +1,40 @@
+  <% @overallconfig.each do |o| %>
+
+ 	<h1><%= o.title %></h1>
+
+  <% end %>
+
+
+
+<div class="container">
+
+  <% @artistname.each do |a| %>
+
+    <nav>
+        <a href="/category/<%= a.id %>"><%= a.name %></a>
+    </nav>
+
+  <% end %>
+
+
+
+  <div class="title_container">
+    <%= page_entries_info @musictitle %>
+
+
+	  <% @musictitle.each do |m| %> 
+ 		<p><a href="/title/<%= m.id %>"><%= m.title %></a>
+          <%= link_to m.video_url.to_s do %>
+          <%= image_tag(m.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+          <% end %>
+        </p>
+
+  <hr> 
+
+      <% end %>
+
+
+    <%= paginate @musictitle %>
+  </div>
+
+</div>

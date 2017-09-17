@@ -1,0 +1,26 @@
+// Place all the styles related to the overallconfigs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+    text-align: center;
+    font-size: 50px;
+   }
+.container{
+    width: 960px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav{
+   width: 30%;
+   height: auto;
+   text-align: center;
+  
+ }
+.title_container{
+   width: 65%;
+   height: auto;
+   text-align: center;
+   float: right;
+}   

@@ -1,0 +1,24 @@
+<!--<p id="notice"><#%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <#%= @music_title.title %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <#%= @music_title.video %>
+</p>
+
+<#%= link_to 'Edit', edit_music_title_path(@music_title) %> |
+<#%= link_to 'Back', music_titles_path %>-->
+
+<% @music_title.each do |m| %>
+ <p> <a href="/title/<%= m.id %>"><%= m.title %></a>
+    <%= link_to m.video_url.to_s do %>
+      <%= image_tag(m.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+    <% end %>
+</p>
+<hr>
+<% end %>
+  

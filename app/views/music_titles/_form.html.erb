@@ -1,0 +1,27 @@
+<%= form_with(model: music_title, local: true) do |form| %>
+  <% if music_title.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(music_title.errors.count, "error") %> prohibited this music_title from being saved:</h2>
+
+      <ul>
+      <% music_title.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :music_title_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :video %>
+    <%= form.text_field :video, id: :music_title_video %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

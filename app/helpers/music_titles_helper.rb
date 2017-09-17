@@ -1,0 +1,2 @@
+module MusicTitlesHelper
+end

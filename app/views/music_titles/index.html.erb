@@ -1,0 +1,36 @@
+<!--<p id="notice"><#%= notice %></p>
+
+<h1>Music Titles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Video</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <#% @music_titles.each do |music_title| %>
+      <tr>
+        <td><#%= music_title.title %></td>
+        <td><#%= music_title.video %></td>
+        <td><#%= link_to 'Show', music_title %></td>
+        <td><#%= link_to 'Edit', edit_music_title_path(music_title) %></td>
+        <td><#%= link_to 'Destroy', music_title, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <#% end %>
+  </tbody>
+</table>
+
+<br>
+
+<#%= link_to 'New Music Title', new_music_title_path %>
+-->
+<% @music_title.each do |m| %>
+ <p><%= m.title %>
+    <%= m.video %>
+ </p>
+<hr>
+<% end %>
