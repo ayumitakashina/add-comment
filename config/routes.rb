@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :music_titles
   resources :albumnames
-  
+  resources :users 
   get 'title/:id' => 'overallconfigs#show'
 
   get 'category/:id' => 'overallconfigs#category'
