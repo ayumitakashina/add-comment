@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable 
   
   validates :username, presence: true, uniqueness: true
- 
+  has_many :comments
+  belongs_to :music_titles 
  
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

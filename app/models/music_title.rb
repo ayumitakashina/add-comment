@@ -3,4 +3,5 @@ class MusicTitle < ApplicationRecord
   validates :title, :video, :presence => true
   belongs_to :overallconfig
   belongs_to :albumname
+  has_many :comments
 end
